@@ -1,7 +1,7 @@
 CREATE TABLE Category(
     category_id INT auto_increment NOT NULL,
     category_name VARCHAR(50) NOT NULL,
-    PRIMARY KEY(book_id)
+    PRIMARY KEY(category_id)
 );
 
 CREATE TABLE Books(
