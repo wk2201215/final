@@ -40,7 +40,7 @@ CREATE TABLE RegisteredBooks(
     Possession INT DEFAULT 0 NOT NULL,
     purchase_date DATETIME,
     Purchase_amount INT,
-    PRIMARY KEY(users_id,book_id),
+    PRIMARY KEY(user_id,book_id),
     FOREIGN KEY(user_id) REFERENCES Users(user_id),
     FOREIGN KEY(book_id) REFERENCES Books(book_id)
 );
