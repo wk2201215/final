@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'default/header.php'; ?>
 <?php
-    echo '<div id="app'>
+    echo '<div id="app">';
     unset($_SESSION['customer']);
     echo 'ユーザーID';
     echo '<input type="text" name="login_id">';
