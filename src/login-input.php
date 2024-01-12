@@ -6,21 +6,12 @@
     echo '<input type="text" name="login_id">';
     echo '<br>';
     echo '<div id="app">
-           <div class="form-horizontal">
-            <div class="form-group">
-             <label class="col-md-2 control-label">パスワード</label>
-             <div class="col-md-10">
-              <input class="form-control" v-model.trim="p" />
-              <div class="help-block">
-               <div class="progress progress-striped active">
-                <div class="progress-bar progress-bar-info" :style="{width: `${s}%`}">
-                </div>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-         </div>';
+    <password 
+      v-model="password"
+      :toggle="true"
+      @score="showScore"
+      @feedback="showFeedback"></password>
+  </div>';
     echo '<br>';
     echo 'パスワード確認';
     echo '<input type="password" name="password2" v-model="password2">';
