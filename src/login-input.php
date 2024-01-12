@@ -1,20 +1,27 @@
 <?php session_start(); ?>
 <?php require 'default/header.php'; ?>
 <?php
-    echo '<div id="app">';
     unset($_SESSION['customer']);
     echo 'ユーザーID';
     echo '<input type="text" name="login_id">';
     echo '<br>';
-    echo 'パスワード';
-    echo '<input type="password" name="password1" v-model="password1">';
-    echo '<br>';
-    echo '<div class="help-block">
-           <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-info" :style="{width: `${s}%`}">
+    echo '<div id="app">
+           <div class="form-horizontal">
+            <div class="form-group">
+             <label class="col-md-2 control-label">パスワード</label>
+             <div class="col-md-10">
+              <input class="form-control" v-model.trim="p" />
+              <div class="help-block">
+               <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-info" :style="{width: `${s}%`}">
+                </div>
+               </div>
+              </div>
+             </div>
             </div>
-          </div>
+           </div>
          </div>';
+    echo '<br>';
     echo 'パスワード確認';
     echo '<input type="password" name="password2" v-model="password2">';
     echo '<br>';
