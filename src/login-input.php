@@ -25,7 +25,6 @@
     echo 'パスワード確認';
     echo '<input type="password" name="password2" v-model="password2">';
     echo '<br>';
-    echo '<p  v-if="pasCheck">パスワードが違います</p>';
     echo '<input type="submit" class="button" value="ログイン">';
     echo '<br>';
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
