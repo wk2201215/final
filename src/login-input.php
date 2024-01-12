@@ -24,6 +24,5 @@
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script async src="//jsfiddle.net/b0qvujx4/10/embed/"></script>
 <script src="./script/script-login.js"></script>
 <?php require 'default/footer.php'; ?>
