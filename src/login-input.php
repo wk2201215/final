@@ -5,13 +5,13 @@
     echo 'ユーザーID';
     echo '<input type="text" name="login_id">';
     echo '<br>';
-    echo '<div id="app">
-    <password 
-      v-model="password"
-      :toggle="true"
-      @score="showScore"
-      @feedback="showFeedback"></password>
-  </div>';
+    echo '<div id="app">';
+     echo '<password 
+           v-model="password"
+           :toggle="true"
+           @score="showScore"
+           @feedback="showFeedback"></password>';
+    echo '</div>';
     echo '<br>';
     echo 'パスワード確認';
     echo '<input type="password" name="password2" v-model="password2">';
