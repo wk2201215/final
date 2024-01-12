@@ -8,14 +8,19 @@
     echo '<div id="app">';
      echo 'パスワード';
      echo '<password 
+           name="pas1"
+           v-model="password"
+           :toggle="true"
+           @score="showScore"
+           @feedback="showFeedback"></password>';
+     echo 'パスワード確認';
+     echo '<password 
+           name="pas2"
            v-model="password"
            :toggle="true"
            @score="showScore"
            @feedback="showFeedback"></password>';
     echo '</div>';
-    echo '<br>';
-    echo 'パスワード確認';
-    echo '<input type="password" name="password2" v-model="password2">';
     echo '<br>';
     echo '<input type="submit" class="button" value="ログイン">';
     echo '<br>';
