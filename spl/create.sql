@@ -4,13 +4,6 @@ CREATE TABLE Category(
     PRIMARY KEY(category_id)
 );
 
-CREATE TABLE Books(
-    book_id  VARCHAR(50) NOT NULL,
-    category_id INT NOT NULL,
-    PRIMARY KEY(book_id),
-    FOREIGN KEY(category_id) REFERENCES Category(category_id)
-);
-
 CREATE TABLE Administrators(
     administrators_id  INT auto_increment NOT NULL,
     password VARCHAR(50) NOT NULL,
@@ -36,11 +29,12 @@ CREATE TABLE Users(
 CREATE TABLE RegisteredBooks(
     user_id  INT NOT NULL,
     book_id VARCHAR(50) NOT NULL,
+    category_id INT NOT NULL,
     favorite INT DEFAULT 0 NOT NULL,
     Possession INT DEFAULT 0 NOT NULL,
     purchase_date DATETIME,
     Purchase_amount INT,
-    PRIMARY KEY(user_id,book_id),
+    PRIMARY KEY(user_id,book_id,category_id),
     FOREIGN KEY(user_id) REFERENCES Users(user_id),
-    FOREIGN KEY(book_id) REFERENCES Books(book_id)
+    FOREIGN KEY(category_id) REFERENCES Category(category_id)
 );
