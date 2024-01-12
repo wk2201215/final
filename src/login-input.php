@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'header.php'; ?>
+<?php require 'default/header.php'; ?>
 <?php
     unset($_SESSION['customer']);
     echo 'ユーザーID';
@@ -13,4 +13,4 @@
 ?>
     </form>
 </div>
-<?php require 'footer.php'; ?>
+<?php require 'default/footer.php'; ?>
