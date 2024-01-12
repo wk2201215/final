@@ -6,6 +6,7 @@
     echo '<input type="text" name="login_id">';
     echo '<br>';
     echo '<div id="app">';
+     echo 'パスワード';
      echo '<password 
            v-model="password"
            :toggle="true"
