@@ -16,7 +16,7 @@ CREATE TABLE Administrators(
 );
 
 CREATE TABLE Users(
-    user_id  INT auto_increment NOT NULL,
+    user_id  VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     user_name  VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE Users(
 );
 
 CREATE TABLE RegisteredBooks(
-    user_id  INT NOT NULL,
+    user_id VARCHAR(50) NOT NULL,
     book_id VARCHAR(50) NOT NULL,
     category_id INT NOT NULL,
     favorite INT DEFAULT 0 NOT NULL,
