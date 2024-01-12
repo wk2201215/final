@@ -12,7 +12,7 @@ new Vue({
         pasCheck(){
             const password1 = this.password1;
             const password2 = this.password1;
-            const isErr =  password1 == password2  ;
+            const isErr =  password1.equals(password2);
             return isErr;
         },
         s: function(){
