@@ -2,7 +2,8 @@ Vue.component('password', Password);
 new Vue({
     el: '#app',
     data: {
-      password: null
+      password1: null,
+      password2: null
     },
     methods: {
       showFeedback ({suggestions, warning}) {

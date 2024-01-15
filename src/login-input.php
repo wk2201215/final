@@ -3,20 +3,20 @@
 <?php
     unset($_SESSION['customer']);
     echo 'ユーザーID';
-    echo '<input type="text" name="login_id">';
+    echo '<input type="text" name="user_id">';
     echo '<br>';
     echo '<div id="app">';
      echo 'パスワード';
      echo '<password 
            name="pas1"
-           v-model="password"
+           v-model="password1"
            :toggle="true"
            @score="showScore"
            @feedback="showFeedback"></password>';
      echo 'パスワード確認';
      echo '<password 
            name="pas2"
-           v-model="password"
+           v-model="password2"
            :toggle="true"
            @score="showScore"
            @feedback="showFeedback"></password>';

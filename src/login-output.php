@@ -3,10 +3,10 @@
 <?php
 unset($_SESSION['customer']);
 $pdo=new PDO($connect, USER, PASS);
-$sql=$pdo->prepare('select * from Users where login_id=?');
-$sql->execute([$_POST['login_id']]);
+$sql=$pdo->prepare('select * from Users where user_id=?');
+$sql->execute([$_POST['user_id']]);
 foreach($sql as $row) {
-    if(password_verify($_POST['password'],$row['customer_password'])){
+    if(password_verify($_POST['pas1'],$row['password'])){
         $_SESSION['customer']=[
             'id'=>$row['customer_id'],
             'login_id'=>$row['login_id'],
