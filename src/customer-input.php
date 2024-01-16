@@ -41,8 +41,8 @@
     echo '<br>';
 
     echo '<label class="label">性別</label>';
-    echo '<input type="radio" id="gender" value="0" required/>男
-          <input type="radio" id="gender" value="1" required/>女';
+    echo '<input type="radio" name="gender" value="0" required/>男
+          <input type="radio" name="gender" value="1" required/>女';
     echo '<br>';
     
     echo '<input class="button is-primary is-medium mt-4" type="submit" value="',$b,'" style="width:100%;">';
