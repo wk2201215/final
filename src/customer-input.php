@@ -26,14 +26,6 @@
     echo '<input class="input" type="password" name="password"  value="', $password, '" required>';
     echo '<br>';
 
-    echo '<label class="label">郵便番号</label>';
-    echo '<input class="input" type="text" name="postcode"  value="', $postcode, '" required>';
-    echo '<br>';
-
-    echo '<label class="label">住所</label>';
-    echo '<input class="input" type="text" name="address"  value="', $address, '" required>';
-    echo '<br>';
-
     echo '<label class="label">電話番号</label>';
     echo '<input class="input" type="text" name="tel"  value="', $tel, '" required>';
     echo '<br>';
@@ -46,6 +38,11 @@
 
     echo '<label class="label">生年月日</label>';
     echo '<input class="input" type="date" name="birth"  value="', $birth, '" required>';
+    echo '<br>';
+
+    echo '<label class="label">性別</label>';
+    echo '<input type="radio" id="0" value="0" required/>男
+          <input type="radio" id="1" value="1" required/>女';
     echo '<br>';
     
     echo '<input class="button is-primary is-medium mt-4" type="submit" value="',$b,'" style="width:100%;">';
