@@ -2,7 +2,7 @@
 <?php require 'default/db-connect.php'; ?>
 <?php require 'default/header.php'; ?>
 <?php
-    $id=$password=$name=$email='';
+    $id=$password=$name=$email=$postcode=$address=$tel=$email2=$birth='';
     $b='登録';
     //登録か変更の確認
     if(isset($_SESSION['user'])){
@@ -39,9 +39,9 @@
     echo '<br>';
 
     echo '<label class="label">メールアドレス</label>';
-    echo '<input class="input" type="text" name="mail"  value="', $mail, '" required>';
+    echo '<input class="input" type="text" name="mail"  value="', $email, '" required>';
     echo '<label class="label">メールアドレス確認</label>';
-    echo '<input class="input" type="text" name="mail2"  value="', $mail, '" required>';
+    echo '<input class="input" type="text" name="mail2"  value="', $email2, '" required>';
     echo '<br>';
 
     echo '<label class="label">生年月日</label>';
