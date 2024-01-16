@@ -2,6 +2,7 @@
 <?php require 'default/header.php'; ?>
 <?php
     unset($_SESSION['customer']);
+    <from>
     echo 'ユーザーID';
     echo '<input type="text" name="user_id">';
     echo '<br>';
@@ -25,12 +26,12 @@
     echo '<input type="submit" class="button" value="ログイン">';
     echo '<br>';
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
-    echo '</div>';
+    echo '</from>';
 ?>
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-password-strength-meter@1.4.2/dist/vue-password-strength-meter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
-<script src="./script/script-login.js"></script>
+<script src="./script/login-input.js"></script>
 <?php require 'default/footer.php'; ?>
