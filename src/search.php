@@ -1,3 +1,4 @@
+<h1>Google Books APIs</h1>
 <form action="top.php" method="post" >
 タイトル：<input type="text" name="intitle" value="<?php echo $str1; ?>">
 <br>
