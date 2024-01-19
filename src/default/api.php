@@ -47,10 +47,19 @@ $data = json_decode($json);
 // 全体の件数を取得
 $total_count = $data->totalItems;
 
-// 書籍情報を取得
-$books = $data->items;
+if(isset($data->items)){
+    // 書籍情報を取得
+    $books = $data->items;
 
-// 実際に取得した件数
-$get_count = count($books);
+   // 実際に取得した件数
+   $get_count = count($books);
+}else{
+    // 書籍情報を取得
+    $books = [];
+
+   // 実際に取得した件数
+   $get_count = 0;
+}
+
 
 ?>
