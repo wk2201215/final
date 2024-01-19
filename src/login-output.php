@@ -4,30 +4,24 @@
 unset($_SESSION['customer']);
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from Users where user_id=?');
-$sql->execute([$_POST['user_id']]);
+$sql->execute([$_POST['id']]);
 foreach($sql as $row) {
-    if(password_verify($_POST['pas1'],$row['password'])){
-        $_SESSION['customer']=[
-            'id'=>$row['customer_id'],
-            'login_id'=>$row['login_id'],
-            'name'=>$row['customer_name'],
+    if(password_verify($_POST['pas2'],$row['password'])){
+        $_SESSION['user']=[
+            'id'=>$row['user_id'],
             'password'=>$_POST['password'],
-            'postcode'=>$row['postcode'],
-            'address'=>$row['address'],
-            'tel'=>$row['telephone'],
-            'mail'=>$row['mail'],
+            'name'=>$row['user_name'],
+            'gender'=>$row['gender'],
             'birth'=>$row['birth'],
-            'payment'=>null
+            'mail'=>$row['mail'],
+            'tel'=>$row['tel'],
+            'registration_date'=>$row['registration_date'],
+            'update_date'=>$row['update_date'],
+            'last_access_date'=>$row['last_access_date']
         ];
-        if(isset($row['payment_id'])){
-            $sql2=$pdo->prepare('select * from Payments where payment_id=?');
-            $sql2->execute([$row['payment_id']]);
-            $result=$sql2->fetch();
-            $_SESSION['customer']['payment']=$result['payment_name'];
-        }
     }
 }
-if(isset($_SESSION['customer'])){
+if(isset($_SESSION['user'])){
 header('Location:top.php');
 exit();    
 }else{

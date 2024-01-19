@@ -2,9 +2,12 @@
 <?php require 'default/header.php'; ?>
 <?php
     unset($_SESSION['customer']);
+    if(isset($_GET['hogeA'])){
+        echo '<p>',$_GET['hogeA'],'</p>';
+    }
     echo '<from action="login-output.php" method="post">';
-    echo 'ユーザー名';
-    echo '<input type="text" name="user_id">';
+    echo 'ユーザーID';
+    echo '<input type="text" name="id">';
     echo '<br>';
     echo '<div id="app">';
      echo 'パスワード';
