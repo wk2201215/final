@@ -17,6 +17,8 @@
     <button type="submit" name="p+" value="<?php echo $startIndex+1; ?>">></button>
   <?php endif; ?>
 <?php endif; ?>
-<?php echo $url; ?>
+<?php 
+// echo $url; 
+?>
 </form>
 <hr>

@@ -50,6 +50,12 @@
           }else{
             $pageCount = 'null';
           }
+          //リンクGoogle Booksの書籍ページ
+          if(isset($book->volumeInfo->infoLink)){
+            $infoLink = $book->volumeInfo->infoLink;
+          }else{
+            $infoLink = '';
+          }
       ?>
         <div class="loop_books_item">
           <ul class="t">
@@ -57,7 +63,7 @@
               <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
             </li>
             <li>
-                <b>『<?php echo $title; ?>』</b><br />
+            <a href="<?php echo $infoLink; ?>"><b>『<?php echo $title; ?>』</b></a><br />
                 著者：<?php echo $authors; ?>出版社：<?php echo $publisher; ?><br />
                 発行年月日：<?php echo $publishDate; ?>ページ数：<?php echo $pageCount; ?><br />
                 <div class="Card">
