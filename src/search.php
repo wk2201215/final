@@ -10,9 +10,8 @@
     <button type="submit" name="p-" value="<?php echo $startIndex-1; ?>"><</button>
   <?php endif; ?>
   <?php echo $startIndex+1; ?>ページ目
-  <?php if($startIndex < $total_count/$maxResults): ?>
+  <?php if($startIndex < floor($total_count/$maxResults)): ?>
     <button type="submit" name="p+" value="<?php echo $startIndex+1; ?>">></button>
-    <?php echo $total_count/$maxResults; ?>
   <?php endif; ?>
 <?php endif; ?>
 <?php echo $url; ?>
