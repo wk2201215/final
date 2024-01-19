@@ -24,7 +24,7 @@ if($sql==1){
         $str='更新が完了しました';
     }else{
         $sql=$pdo->prepare('insert into Users value(?,?,?,?,?,?,?,default,default,default)');
-        $sql->execute([$_POST['user_id']]);
+        $sql->execute([$_POST['id']]);
         $str='登録が完了しました';
     }
     header('Location:customer-z.phphogeA='.$str);
