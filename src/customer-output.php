@@ -35,7 +35,7 @@ if($sql==1){
     ]);
         $str='登録が完了しました';
     }
-    header('Location:customer-z.phphogeA='.$str);
+    header('Location:customer-z.php?hogeA='.$str);
     exit();
 }
 ?>
