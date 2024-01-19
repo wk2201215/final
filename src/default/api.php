@@ -1,22 +1,21 @@
 <?php
 
 // 検索条件を配列にする
+$params = array();
+//書籍タイトル
 if(isset($_POST['intitle'])){
     $str1=$_POST['intitle'];
+    $params = array_merge($params,array('intitle'=>$str1));
 }else{
-    $str1='';
+    unset($params['intitle']);
 }
-
+//著者
 if(isset($_POST['inauthor'])){
     $str2=$_POST['inauthor'];
+    $params = array_merge($params,array('inauthor'=>$str2));
 }else{
-    $str2='';
+    unset($params['inauthor']);
 }
-
-$params = array(
-  'intitle'  => $str1,  //書籍タイトル
-  'inauthor' => $str2,  //著者
-);
 
 // 1ページあたりの取得件数
 $maxResults = 10;
