@@ -4,12 +4,12 @@
 if(isset($_POST['intitle'])){
     $str1=$_POST['intitle'];
 }else{
-    $str1=$_POST['intitle'];
+    $str1='';
 }
 if(isset($_POST['inauthor'])){
     $str2=$_POST['inauthor'];
 }else{
-    $str2=$_POST['inauthor'];
+    $str2='';
 }
 $params = array(
   'intitle'  => $str1,  //書籍タイトル
