@@ -13,10 +13,12 @@
      echo 'パスワード';
      echo '<input type="password" 
            name="pas1"
+           v-model="pas1"
            required />';
      echo 'パスワード確認';
      echo '<input type="password" 
            name="pas2"
+           v-model="pas2"
            required />';
      echo '<p  v-if="ab"
           >パスワードが一致していません</p>';
