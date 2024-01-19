@@ -1,52 +1,35 @@
 <?php session_start(); ?>
-<?php require 'default/db-connect.php'; ?>
+<?php require 'default/api.php'; ?>
 <?php require 'default/header.php'; ?>
-<?php
-    $pdo=new PDO($connect,USER,PASS);
-if(isset($_POST['keyword'])){
-//キーワード検索
-    $sql=$pdo->prepare('select * from Products where product_name like ?');
-    $sql->execute(['%'.$_POST['keyword'].'%']);
-}else if(isset($_GET['category_id'])){
-//カテゴリ検索
-    $sql=$pdo->prepare('select * from Products where category_id = ?');
-    $sql->execute([$_GET['category_id']]);
-}else if(isset($_GET['priceA'])){
-//値段範囲検索
-    if($_GET['priceB']=='max'){
-        //上限なし
-        $sql=$pdo->prepare('select * from Products where price >= ?');
-        $sql->execute([$_GET['priceA']]);
-    }else{
-        //値段の範囲指定
-        $sql=$pdo->prepare('select * from Products where price BETWEEN ? AND ?');
-        $sql->execute([$_GET['priceA'],$_GET['priceB']]);
-    }
-}else{
-    $pdor=new PDO($connect,USER,PASS);
-    $sqlr=$pdor->query('
-    select P.*,num
-    from Products as P 
-    inner join
-    (select product_id,sum(quantity) as num
-    from Order_details group by product_id) as O
-    on
-    P.product_id=O.product_id
-    order by num desc
-    limit 10;');
-    // var_dump($sqlr);
-    // $k=$sqlr->fetchAll();
-    // var_dump($k);
-    $sql=$pdo->query('select * from Products');
-}
-// var_dump($sqlr);
-// echo '<hr>';
-// var_dump($sql);
-// echo '<hr>';
-foreach ($sql as $i => $row) {
-   
-   
-}
-?>
-</div>
+<p>全<?php echo $total_count; ?>件中、<?php echo $get_count; ?>件を表示中</p>
+
+  <!-- 1件以上取得した書籍情報がある場合 -->
+  <?php if($get_count > 0): ?>
+    <div class="loop_books">
+
+      <!-- 取得した書籍情報を順に表示 -->
+      <?php foreach($books as $book):
+          // タイトル
+          $title = $book->volumeInfo->title;
+          // サムネ画像
+          $thumbnail = $book->volumeInfo->imageLinks->thumbnail;
+          // 著者（配列なのでカンマ区切りに変更）
+          $authors = implode(',', $book->volumeInfo->authors);
+      ?>
+        <div class="loop_books_item">
+          <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
+          <p>
+            <b>『<?php echo $title; ?>』</b><br />
+            著者：<?php echo $authors; ?>
+          </p>
+        </div>
+      <?php endforeach; ?>
+
+    </div><!-- ./loop_books -->
+
+  <!-- 書籍情報が取得されていない場合 -->
+  <?php else: ?>
+    <p>情報が有りません</p>
+
+  <?php endif; ?>
 <?php require 'default/footer.php'; ?>
