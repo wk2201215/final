@@ -7,7 +7,7 @@
         echo '<p>',$_GET['hogeA'],'</p>';
     }
     echo 'ユーザーID';
-    echo '<input type="text" name="id">';
+    echo '<input type="text" name="id" required>';
     echo '<br>';
     echo '<div id="app">';
      echo 'パスワード';
@@ -16,17 +16,19 @@
            v-model="password1"
            :toggle="true"
            @score="showScore"
-           @feedback="showFeedback"></password>';
+           @feedback="showFeedback"
+           required></password>';
      echo 'パスワード確認';
      echo '<password 
            name="pas2"
            v-model="password2"
            :toggle="true"
            @score="showScore"
-           @feedback="showFeedback"></password>';
+           @feedback="showFeedback"
+           required></password>';
     echo '</div>';
     echo '<br>';
-    echo '<input type="submit" class="button" value="ログイン">';
+    echo '<input type="submit" value="ログイン">';
     echo '<br>';
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
 ?>
