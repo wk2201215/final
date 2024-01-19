@@ -26,8 +26,9 @@ if(isset($_POST['p+'])){
     $startIndex = $_POST['p+'];
 }else if(isset($_POST['p-'])){
     $startIndex = $_POST['p-'];
+}else{
+    $startIndex = 0;  //欲しいページ番号-1 で設定
 }
-$startIndex = 0;  //欲しいページ番号-1 で設定
 
 // APIの基本になるURL
 $base_url = 'https://www.googleapis.com/books/v1/volumes?q=';
