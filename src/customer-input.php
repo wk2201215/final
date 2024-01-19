@@ -43,7 +43,7 @@
     echo '<br>';
 
     echo '<label class="label">電話番号</label>';
-    echo '<input class="input" type="tel" name="tel"  value="', $tel, '" required>';
+    echo '<input class="input" type="tel" name="tel"  value="', $tel, '" pattern="\d{1,5}-\d{1,4}-\d{4,5}" title="電話番号は、市外局番からハイフン（-）を入れて記入してください。" required>';
     echo '<br>';
 
     echo '<label class="label">メールアドレス</label>';
