@@ -27,5 +27,6 @@
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
 ?>
 </form>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="./script/login-input.js"></script>
 <?php require 'default/footer.php'; ?>
