@@ -1,17 +1,17 @@
-Vue.component('password', Password); 
 new Vue({
-    el: '#app',
-    data: {
-      password1: null,
-      password2: null
-    },
-    methods: {
-      showFeedback ({suggestions, warning}) {
-        console.log('🙏', suggestions)
-        console.log('⚠', warning)
-      },
-      showScore (score) {
-        console.log('💯', score)
-      }
+  el: '#app',
+  data(){
+    return{
+        pas1: null,
+        pas2: null
+    };
+  },
+  computed: {
+    ab(){
+        const pas1 = this.pas1;
+        const pas2 = this.pas2;
+        const isErr =  pas1==pas2;
+        return isErr;
     }
-  })
+}
+})

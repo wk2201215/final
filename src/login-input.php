@@ -13,19 +13,13 @@
      echo 'パスワード';
      echo '<password 
            name="pas1"
-           v-model="password1"
-           :toggle="true"
-           @score="showScore"
-           @feedback="showFeedback"
            required></password>';
      echo 'パスワード確認';
      echo '<password 
            name="pas2"
-           v-model="password2"
-           :toggle="true"
-           @score="showScore"
-           @feedback="showFeedback"
            required></password>';
+     echo '<p  v-if="ab"
+          >パスワードが一致していません</p>';
     echo '</div>';
     echo '<br>';
     echo '<input type="submit" value="ログイン">';
@@ -33,8 +27,4 @@
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
 ?>
 </form>
-<script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-password-strength-meter@1.4.2/dist/vue-password-strength-meter.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
-<script src="./script/login-input.js"></script>
 <?php require 'default/footer.php'; ?>
