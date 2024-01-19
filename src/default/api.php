@@ -7,7 +7,7 @@ $str1=$str2=$str3='';
 if(isset($_POST['intitle'])){
     if($_POST['intitle']!=''){
         $str1=trim($_POST['intitle']);
-        $str3=str_replace($str3);
+        $str1=str_replace($str1);
         $params = array_merge($params,array('intitle'=>$str1));
     }
 }
