@@ -38,7 +38,7 @@
            @score="showScore"
            @feedback="showFeedback"></password>';
     echo '</div>';
-    echo '<br>;'
+    echo '<br>;';
 
     echo '<label class="label">電話番号</label>';
     echo '<input class="input" type="text" name="tel"  value="', $tel, '" required>';
