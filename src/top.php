@@ -28,11 +28,17 @@
           }
       ?>
         <div class="loop_books_item">
-          <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
-          <p>
-            <b>『<?php echo $title; ?>』</b><br />
-            著者：<?php echo $authors; ?>
-          </p>
+          <ul class="t">
+            <li>
+              <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
+            </li>
+            <li>
+              <p>
+                <b>『<?php echo $title; ?>』</b><br />
+                著者：<?php echo $authors; ?>
+              </p>
+            </li>
+          </ul>
         </div>
       <?php endforeach; ?>
 
