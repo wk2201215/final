@@ -5,6 +5,9 @@
     $id=$password=$name=$email=$postcode=$address=$tel=$email2=$birth='';
     $b='登録';
     //登録か変更の確認
+    if(isset($_GET['hogeA'])){
+        echo '<p>',$_GET['hogeA'],'</p>';
+    }
     if(isset($_SESSION['user'])){
         $id=$_SESSION['user']['id'];
         $password=$_SESSION['user']['password'];
@@ -15,10 +18,10 @@
     echo '<form action="customer-output.php" method="post" name="enter" onsubmit="return ch_mail();">';
 
     echo '<label class="label">ユーザーID</label>';
-    echo '<input class="input" type="text" name="login_id"  value="', $id, '" required>';
+    echo '<input class="input" type="text" name="id"  value="', $id, '" required>';
     echo '<br>';
 
-    echo '<label class="label">氏名</label>';
+    echo '<label class="label">ユーザー名</label>';
     echo '<input class="input" type="text" name="name"  value="', $name, '" required>';
     echo '<br>';
 

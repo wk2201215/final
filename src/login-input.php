@@ -3,7 +3,7 @@
 <?php
     unset($_SESSION['customer']);
     echo '<from action="login-output.php" method="post">';
-    echo 'ユーザーID';
+    echo 'ユーザー名';
     echo '<input type="text" name="user_id">';
     echo '<br>';
     echo '<div id="app">';
@@ -28,8 +28,6 @@
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
     echo '</from>';
 ?>
-    </form>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-password-strength-meter@1.4.2/dist/vue-password-strength-meter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
