@@ -49,10 +49,10 @@ if($count!=0){
     $params_url = substr($base_url, 0, -1);
 
     // 件数情報を設定
-    $url = $params_url.'&maxResults='.$maxResults.'&startIndex='.$startIndex;
+    $url = $params_url.='&maxResults='.$maxResults.'&startIndex='.$startIndex;
 }else{
     // 件数情報を設定
-    $url = $params_url.'maxResults='.$maxResults.'&startIndex='.$startIndex;
+    $url = $params_url.='maxResults='.$maxResults.'&startIndex='.$startIndex;
 }
 
 // 書籍情報を取得
