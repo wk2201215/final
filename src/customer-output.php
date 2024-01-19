@@ -26,7 +26,7 @@ if($ab==1){
         $sql=$pdo->prepare('insert into Users value(?,?,?,?,?,?,?,default,default,default)');
         $sql->execute([
             $_POST['id'],
-            $_POST['pas2'],
+            $pass,
             $_POST['name'],
             $_POST['gender'],
             $_POST['birth'],
