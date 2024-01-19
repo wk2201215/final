@@ -27,7 +27,11 @@
             $authors = implode(',', $a); 
           }
           //出版社
-          $publisher = $book->volumeInfo->publisher;
+          if(isset($book->volumeInfo->publisher)){
+            $publisher = $book->volumeInfo->publisher;
+          }else{
+            $publisher = 'null';
+          }
           //発行年月日
           if(isset($book->volumeInfo->publishDate)){
             $publishDate = $book->volumeInfo->publishDate;
@@ -51,10 +55,15 @@
             <li>
               <p>
                 <b>『<?php echo $title; ?>』</b><br />
-                著者：<?php echo $authors; ?><br />
-                出版社：<?php echo $publisher; ?><br />
+                著者：<?php echo $authors; ?>出版社：<?php echo $publisher; ?><br />
                 発行年月日：<?php echo $publishDate; ?>ページ数：<?php echo $pageCount; ?><br />
-                書籍内容：<?php echo $description; ?><br />
+                <div class="cp_box">
+	              <input id="cp01" type="checkbox">
+	              <label for="cp01"></label>
+	              <div class="cp_container">
+		            <p>書籍内容：<?php echo $description; ?></p>
+	              </div>
+                </div>
               </p>
             </li>
           </ul>
