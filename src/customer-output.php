@@ -31,7 +31,7 @@ if($sql==1){
             $_POST['gender'],
             $_POST['birth'],
             $_POST['mail'],
-            $_POST['tel'],
+            $_POST['tel']
     ]);
         $str='登録が完了しました';
     }
