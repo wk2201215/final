@@ -19,7 +19,7 @@ if($sql==1){
         $sql2->execute([
             $_POST['id'],$_POST['name'],
             $pass,$_POST['mail2'],$_POST['gender'],
-            $_POST['tel'],$_POST['birth']
+            $_POST['tel'],$_POST['birth'],
             $id]);
         $str='更新が完了しました';
     }else{
