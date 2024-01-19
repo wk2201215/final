@@ -4,13 +4,17 @@
 $params = array();
 $str1=$str2='';
 //書籍タイトル
-if(isset($_POST['intitle'])){
+if(!isset($_POST['intitle'])){
     if(is_null($_POST['intitle'])){
         $str1=$_POST['intitle'];
         $params = array_merge($params,array('intitle'=>$str1));
+        1
     }else{
     unset($params['intitle']);
+    2
     }
+}else{
+    3
 }
 //著者
 if(isset($_POST['inauthor'])){
