@@ -22,8 +22,10 @@ $params = array(
 $maxResults = 10;
 
 // ページ番号（1ページ目の情報を取得）
-if(isset($_POST['p'])){
-    $startIndex = $_POST['p'];
+if(isset($_POST['p+'])){
+    $startIndex = $_POST['p+'];
+}else if(isset($_POST['p-'])){
+    $startIndex = $_POST['p-'];
 }
 $startIndex = 0;  //欲しいページ番号-1 で設定
 
