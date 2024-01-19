@@ -12,7 +12,12 @@
           // タイトル
           $title = $book->volumeInfo->title;
           // サムネ画像
-          $thumbnail = $book->volumeInfo->imageLinks->thumbnail;
+          $img = $book->volumeInfo->readingModes->image;
+          if($img){
+            $thumbnail = $book->volumeInfo->imageLinks->thumbnail;
+          }else{
+            $thumbnail = './img/null.jpg';
+          }
           // 著者（配列なのでカンマ区切りに変更）
           $authors = implode(',', $book->volumeInfo->authors);
       ?>
