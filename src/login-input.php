@@ -9,15 +9,15 @@
     echo '<div id="app">';
      echo 'パスワード';
      echo '<password 
-           name="mail"
-           v-model="mail"
+           name="pas1"
+           v-model="password1"
            :toggle="true"
            @score="showScore"
            @feedback="showFeedback"></password>';
      echo 'パスワード確認';
      echo '<password 
-           name="mail2"
-           v-model="mail2"
+           name="pas2"
+           v-model="password2"
            :toggle="true"
            @score="showScore"
            @feedback="showFeedback"></password>';
