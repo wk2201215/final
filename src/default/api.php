@@ -39,7 +39,7 @@ $base_url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
 $count = count($params);
 
-if($cout!=0){
+if($count!=0){
     // 配列で設定した検索条件をURLに追加
     foreach ($params as $key => $value) {
         $base_url .= $key.':'.$value.'+';
