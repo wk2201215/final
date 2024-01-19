@@ -32,9 +32,20 @@ if($ab==1){
             $_POST['birth'],
             $_POST['mail'],
             $_POST['tel']
-    ]);
+        ]);
         $str='登録が完了しました';
     }
+    $_SESSION['user']=[
+        'id'=>$_POST['id'],
+        'pas'=>$pass,
+        'name'=>$_POST['name'],
+        'gender'=>$_POST['gender'],
+        'birth'=>$_POST['birth'],
+        'mail'=>$_POST['mail'],
+        'tel'=>$row['telephone'],
+        'mail'=>$row['mail'],
+        'tel'=>$_POST['tel']
+    ];
     header('Location:customer-z.php?hogeA='.$str);
     exit();
 }
