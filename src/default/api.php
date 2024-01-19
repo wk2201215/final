@@ -51,6 +51,7 @@ if($count!=0){
     // 件数情報を設定
     $url = $params_url.='&maxResults='.$maxResults.'&startIndex='.$startIndex;
 }else{
+    $params_url = $base_url;
     // 件数情報を設定
     $url = $params_url.='maxResults='.$maxResults.'&startIndex='.$startIndex;
 }
