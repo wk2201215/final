@@ -1,9 +1,19 @@
 <?php
 
 // 検索条件を配列にする
+if(isset($_POST['intitle'])){
+    $str1=$_POST['intitle'];
+}else{
+    $str1=$_POST['intitle'];
+}
+if(isset($_POST['inauthor'])){
+    $str2=$_POST['inauthor'];
+}else{
+    $str2=$_POST['inauthor'];
+}
 $params = array(
-  'intitle'  => $_POST['intitle'],  //書籍タイトル
-  'inauthor' => $_POST['inauthor'],       //著者
+  'intitle'  => $str1,  //書籍タイトル
+  'inauthor' => $str2,  //著者
 );
 
 // 1ページあたりの取得件数
