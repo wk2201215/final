@@ -5,6 +5,7 @@ $pdo=new PDO($connect,USER,PASS);
 $pass=password_hash($_POST['pas2'], PASSWORD_DEFAULT);
 $sql=$pdo->prepare('select COUNT(*) from Users where user_id=?');
 $sql->execute([$_POST['id']]);
+$ab=$sql->fetchColumn();
 if($sql==1){
     header('Location:customer-input.php?hogeA=そのログインIDは使用できません');
     exit();
