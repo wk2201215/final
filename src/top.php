@@ -45,7 +45,11 @@
             $description = 'null';
           }
           //ページ数
-          $pageCount = $book->volumeInfo->pageCount;
+          if(isset($book->volumeInfo->pageCount)){
+            $pageCount = $book->volumeInfo->pageCount;
+          }else{
+            $pageCount = 'null';
+          }
       ?>
         <div class="loop_books_item">
           <ul class="t">
