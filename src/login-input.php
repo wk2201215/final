@@ -2,7 +2,7 @@
 <?php require 'default/header.php'; ?>
 <?php
     unset($_SESSION['customer']);
-    echo '<from action="login-output.php" method="post">'
+    echo '<from action="login-output.php" method="post">';
     echo 'ユーザーID';
     echo '<input type="text" name="user_id">';
     echo '<br>';
