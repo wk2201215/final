@@ -13,19 +13,18 @@ if($sql==1){
 }else{
     if(isset($_SESSION['user'])){
         $id=$_SESSION['user']['id'];
-        $sql2=$pdo->prepare('update Customers set 
+        $sql2=$pdo->prepare('update Users set 
         user_id=?, user_name=?, 
-        password=?, email=?, gender=?,
-        tel, birth=? where user_id=?');
+        password=?, mail=?, gender=?,
+        tel=?, birth=? where user_id=?');
         $sql2->execute([
             $_POST['id'],$_POST['name'],
-            $pass,$_POST['pas2'],$_POST['mail2'],
-            $_POST['gender'],$_POST['tel'],
-            $_POST['birth']
+            $pass,$_POST['mail2'],$_POST['gender'],
+            $_POST['tel'],$_POST['birth']
             $id]);
         $str='更新が完了しました';
     }else{
-        $sql=$pdo->prepare('insert into Customers value(null,?,?,?,?,?,?,default,default,default)');
+        $sql=$pdo->prepare('insert into Users value(?,?,?,?,?,?,?,default,default,default)');
         $sql->execute([$_POST['user_id']]);
         $str='登録が完了しました';
     }
