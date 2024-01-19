@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require 'default/db-connect.php'; ?>
-<?php require 'default/header.php'; ?>
 <?php
 $pdo=new PDO($connect,USER,PASS);
 $pass=password_hash($_POST['pas2'], PASSWORD_DEFAULT);
