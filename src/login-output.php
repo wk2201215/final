@@ -9,7 +9,7 @@ foreach($sql as $row) {
     if(password_verify($_POST['pas2'],$row['password'])){
         $_SESSION['user']=[
             'id'=>$row['user_id'],
-            'password'=>$_POST['password'],
+            'password'=>$_POST['pas2'],
             'name'=>$row['user_name'],
             'gender'=>$row['gender'],
             'birth'=>$row['birth'],
