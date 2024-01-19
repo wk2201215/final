@@ -29,7 +29,11 @@
           //出版社
           $publisher = $book->volumeInfo->publisher;
           //発行年月日
-          $publishDate = $book->volumeInfo->publishDate;
+          if(isset($book->volumeInfo->publishDate)){
+            $publishDate = $book->volumeInfo->publishDate;
+          }else{
+            $publishDate = '';
+          }
           //書籍内容の説明
           $description = $book->volumeInfo->description;
           //ページ数
