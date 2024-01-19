@@ -19,7 +19,11 @@
             $thumbnail = './img/null.jpg';
           }
           // 著者（配列なのでカンマ区切りに変更）
-          $authors = implode(',', $book->volumeInfo->authors);
+          if(isset($book->volumeInfo->authors)){
+            $authors = implode(',', $book->volumeInfo->authors);
+          }else{
+            $authors = implode();
+          }
       ?>
         <div class="loop_books_item">
           <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
