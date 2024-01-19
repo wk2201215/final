@@ -67,3 +67,21 @@ function ch_mail(){
       return false;
     }
   }
+
+Vue.component('password', Password); 
+new Vue({
+    el: '#app',
+    data: {
+      mail: null,
+      mail: null
+    },
+    methods: {
+      showFeedback ({suggestions, warning}) {
+        console.log('🙏', suggestions)
+        console.log('⚠', warning)
+      },
+      showScore (score) {
+        console.log('💯', score)
+      }
+    }
+  })

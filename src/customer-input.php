@@ -30,11 +30,27 @@
     echo '<input class="input" type="text" name="tel"  value="', $tel, '" required>';
     echo '<br>';
 
-    echo '<label class="label">メールアドレス</label>';
-    echo '<input class="input" type="text" name="mail"  value="', $email, '" required>';
-    echo '<label class="label">メールアドレス確認</label>';
-    echo '<input class="input" type="text" name="mail2"  value="', $email2, '" required>';
-    echo '<br>';
+    // echo '<label class="label">メールアドレス</label>';
+    // echo '<input class="input" type="text" name="mail"  value="', $email, '" required>';
+    // echo '<label class="label">メールアドレス確認</label>';
+    // echo '<input class="input" type="text" name="mail2"  value="', $email2, '" required>';
+    // echo '<br>';
+
+    echo 'パスワード';
+     echo '<password 
+           name="mail"
+           v-model="mail"
+           :toggle="true"
+           @score="showScore"
+           @feedback="showFeedback"></password>';
+     echo 'パスワード確認';
+     echo '<password 
+           name="mail2"
+           v-model="mail2"
+           :toggle="true"
+           @score="showScore"
+           @feedback="showFeedback"></password>';
+           
 
     echo '<label class="label">生年月日</label>';
     echo '<input class="input" type="date" name="birth"  value="', $birth, '" required>';
