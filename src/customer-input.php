@@ -10,10 +10,13 @@
     }
     if(isset($_SESSION['user'])){
         $id=$_SESSION['user']['id'];
-        $password=$_SESSION['user']['password'];
+        // $password=$_SESSION['user']['password'];
         $name=$_SESSION['user']['name'];
-        $email=$_SESSION['user']['email'];
-        $b='変更';
+        $tel=$_SESSION['user']['tel'];
+        $email=$_SESSION['user']['mail'];
+        $birth=$_SESSION['user']['birth'];
+        $gender=$_SESSION['user']['gender'];
+        $b='更新';
     }
     echo '<form action="customer-output.php" method="post" name="enter" onsubmit="return ch_mail();">';
 
@@ -50,10 +53,10 @@
     echo '<br>';
 
     echo '<label class="label">メールアドレス</label>';
-    echo '<input class="input" type="text" name="mail"  value="', $email, '" required>';
+    echo '<input class="input" type="text" name="mail"  value="', $mail, '" required>';
     echo '<br>';
     echo '<label class="label">メールアドレス確認</label>';
-    echo '<input class="input" type="text" name="mail2"  value="', $email2, '" required>';
+    echo '<input class="input" type="text" name="mail2" required>';
     echo '<br>';
 
     echo '<label class="label">生年月日</label>';
@@ -61,8 +64,8 @@
     echo '<br>';
 
     echo '<label class="label">性別</label>';
-    echo '<input type="radio" name="gender" value="0" required/>男
-          <input type="radio" name="gender" value="1" required/>女';
+    echo '<input type="radio" name="gender" value="0" value="', $gender, '" required/>男
+          <input type="radio" name="gender" value="1" value="', $gender, '" required/>女';
     echo '<br>';
     
     echo '<input class="button is-primary is-medium mt-4" type="submit" value="',$b,'" style="width:100%;">';

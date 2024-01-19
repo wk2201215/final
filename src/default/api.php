@@ -1,24 +1,18 @@
 <?php
 
 // 検索条件を配列にする
-if(isset($_SESSION['search'])){
-    $str1=$_SESSION['search']['intitle'];
-}else{
-    $_SESSION['search']=[
-        'id'=>$row['user_id'],
-}
 if(isset($_POST['intitle'])){
-    $_SESSION['search']['intitle']=$_POST['intitle'];
     $str1=$_POST['intitle'];
 }else{
-    if(isset($_SESSION['user']))
     $str1='';
 }
+
 if(isset($_POST['inauthor'])){
     $str2=$_POST['inauthor'];
 }else{
     $str2='';
 }
+
 $params = array(
   'intitle'  => $str1,  //書籍タイトル
   'inauthor' => $str2,  //著者
