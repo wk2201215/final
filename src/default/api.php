@@ -2,8 +2,8 @@
 
 // 検索条件を配列にする
 $params = array(
-  'intitle'  => '吾輩は猫である',  //書籍タイトル
-  'inauthor' => '夏目漱石',       //著者
+  'intitle'  => $_POST['intitle'],  //書籍タイトル
+  'inauthor' => $_POST['inauthor'],       //著者
 );
 
 // 1ページあたりの取得件数

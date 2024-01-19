@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require 'default/api.php'; ?>
 <?php require 'default/header.php'; ?>
+<?php require 'search.php'; ?>
 <p>全<?php echo $total_count; ?>件中、<?php echo $get_count; ?>件を表示中</p>
 
   <!-- 1件以上取得した書籍情報がある場合 -->
