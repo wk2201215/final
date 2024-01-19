@@ -6,29 +6,29 @@ $str1=$str2=$str3='';
 //書籍タイトル
 if(isset($_POST['intitle'])){
     if($_POST['intitle']!=''){
-        $str1=$_POST['intitle'];
+        $str1=trim($_POST['intitle']);
+        $str3=str_replace($str3);
         $params = array_merge($params,array('intitle'=>$str1));
-    }else{
-        unset($params['intitle']);
     }
 }
 //著者
 if(isset($_POST['inauthor'])){
     if($_POST['inauthor']!=''){
-        $str2=$_POST['inauthor'];
+        $str2=trim($_POST['inauthor']);
+        $str2=str_replace($str2);
         $params = array_merge($params,array('inauthor'=>$str2));
-    }else{
-        unset($params['inauthor']);
     }
 }
 //出版社
 if(isset($_POST['inpublisher'])){
     if($_POST['inpublisher']!=''){
-        $str3=$_POST['inpublisher'];
+        $str3=trim($_POST['inpublisher']);
+        $str3=str_replace($str3);
         $params = array_merge($params,array('inpublisher'=>$str3));
-    }else{
-        unset($params['inpublisher']);
     }
+    // else{
+    //     unset($params['inpublisher']);
+    // }
 }
 
 // 1ページあたりの取得件数
