@@ -3,7 +3,6 @@
 <?php require 'default/header-top.php'; ?>
 <?php require 'search.php'; ?>
 <p>全<?php echo $total_count; ?>ページ、<?php echo $get_count; ?>件を表示中（<?php echo $startIndex+1; ?>ページ目）</p>
-<a href="<?php $aa=''; echo $aa; ?>">aaa</a>
 
   <!-- 1件以上取得した書籍情報がある場合 -->
   <?php if($get_count > 0): ?>
@@ -61,7 +60,10 @@
         <div class="loop_books_item">
           <ul class="t">
             <li>
-              <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
+              <a href="<?php echo $infoLink; ?>">
+                <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>">
+              </a>
+              <br />
             </li>
             <li>
             <a href="<?php echo $infoLink; ?>"><b>『<?php echo $title; ?>』</b></a><br />
