@@ -53,18 +53,18 @@
               <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"><br />
             </li>
             <li>
-              <p>
                 <b>『<?php echo $title; ?>』</b><br />
                 著者：<?php echo $authors; ?>出版社：<?php echo $publisher; ?><br />
                 発行年月日：<?php echo $publishDate; ?>ページ数：<?php echo $pageCount; ?><br />
-                <div class="cp_box">
-	              <input id="cp01" type="checkbox">
-	              <label for="cp01"></label>
-	              <div class="cp_container">
-		            <p>書籍内容：<?php echo $description; ?></p>
-	              </div>
+                <div class="Card">
+                  <div class="Card-Item">
+	                <div class="Card-Item-Comment">
+                      <div class="Card-Item-Comment-Text">
+		                書籍内容：<?php echo $description; ?>
+	                  </div>
+                    </div>
+                  </div>
                 </div>
-              </p>
             </li>
           </ul>
         </div>
@@ -77,6 +77,4 @@
     <p>情報が有りません</p>
 
   <?php endif; ?>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="./script/top.js"></script>
 <?php require 'default/footer.php'; ?>
