@@ -11,13 +11,13 @@
     echo '<br>';
     echo '<div id="app">';
      echo 'パスワード';
-     echo '<password 
+     echo '<input type="password" 
            name="pas1"
-           required></password>';
+           required />';
      echo 'パスワード確認';
-     echo '<password 
+     echo '<input type="password" 
            name="pas2"
-           required></password>';
+           required />';
      echo '<p  v-if="ab"
           >パスワードが一致していません</p>';
     echo '</div>';
@@ -27,4 +27,5 @@
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
 ?>
 </form>
+<script src="./script/login-input.js"></script>
 <?php require 'default/footer.php'; ?>
