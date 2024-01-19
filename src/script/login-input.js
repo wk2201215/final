@@ -10,7 +10,7 @@ new Vue({
     ab(){
         const pas1 = this.pas1;
         const pas2 = this.pas2;
-        const isErr =  pas1 == pas2;
+        const isErr =  pas1 != pas2;
         return isErr;
     }
 }
