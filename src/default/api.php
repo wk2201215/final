@@ -2,6 +2,7 @@
 
 // 検索条件を配列にする
 $params = array();
+$str1=$str2='';
 //書籍タイトル
 if(is_null($_POST['intitle'])){
     $str1=$_POST['intitle'];
