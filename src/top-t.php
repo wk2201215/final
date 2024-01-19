@@ -18,4 +18,4 @@
             <div id="bookItem" class="album py-5 bg-light">
             </div>
         </main>
-<?php require 'default/footer copy.php'; ?>
+<?php require 'default/footer-top.php'; ?>
