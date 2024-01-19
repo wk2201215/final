@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'default/header.php'; ?>
-<from action="login-output.php" method="post">
+<form action="login-output.php" method="post">
 <?php
     unset($_SESSION['customer']);
     if(isset($_GET['hogeA'])){
@@ -32,7 +32,7 @@
     echo '<br>';
     echo 'アカウント新規作成は<a href="customer-input.php">こちら</a>';
 ?>
-</from>
+</form>
 <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-password-strength-meter@1.4.2/dist/vue-password-strength-meter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
