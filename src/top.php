@@ -22,7 +22,8 @@
           if(isset($book->volumeInfo->authors)){
             $authors = implode(',', $book->volumeInfo->authors);
           }else{
-            $authors = implode(',', ''); 
+            $a=['nul'];
+            $authors = implode(',', $a); 
           }
       ?>
         <div class="loop_books_item">
