@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'default/api.php'; ?>
-<?php require 'default/header.php'; ?>
+<?php require 'default/header-top.php'; ?>
 <?php require 'search.php'; ?>
 <p>全<?php echo $total_count; ?>ページ、<?php echo $get_count; ?>件を表示中（<?php echo $startIndex+1; ?>ページ目）</p>
 
@@ -77,4 +77,4 @@
     <p>情報が有りません</p>
 
   <?php endif; ?>
-<?php require 'default/footer.php'; ?>
+<?php require 'default/footer-top.php'; ?>
