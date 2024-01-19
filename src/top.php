@@ -2,7 +2,7 @@
 <?php require 'default/api.php'; ?>
 <?php require 'default/header.php'; ?>
 <?php require 'search.php'; ?>
-<p>全<?php echo $total_count; ?>件中、<?php echo $get_count; ?>件を表示中（<?php echo $startIndex+1; ?>ページ目）</p>
+<p>全<?php echo $total_count; ?>ページ、<?php echo $get_count; ?>件を表示中（<?php echo $startIndex+1; ?>ページ目）</p>
 
   <!-- 1件以上取得した書籍情報がある場合 -->
   <?php if($get_count > 0): ?>
@@ -26,6 +26,14 @@
             $a=['nul'];
             $authors = implode(',', $a); 
           }
+          //出版社
+          $publisher = $book->volumeInfo->publisher;
+          //発行年月日
+          $publishDate = $book->volumeInfo->publishDate;
+          //書籍内容の説明
+          $description = $book->volumeInfo->description;
+          //ページ数
+          $pageCount = $book->volumeInfo->pageCount;
       ?>
         <div class="loop_books_item">
           <ul class="t">
@@ -35,7 +43,10 @@
             <li>
               <p>
                 <b>『<?php echo $title; ?>』</b><br />
-                著者：<?php echo $authors; ?>
+                著者：<?php echo $authors; ?><br />
+                出版社：<?php echo $publisher; ?><br />
+                発行年月日：<?php echo $publishDate; ?>ページ数：<?php echo $pageCount; ?><br />
+                書籍内容：<?php echo $description; ?><br />
               </p>
             </li>
           </ul>

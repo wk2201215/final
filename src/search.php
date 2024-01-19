@@ -4,6 +4,8 @@
 <br>
 著者：<input type="text" name="inauthor" value="<?php echo $str2; ?>">
 <br>
+出版社：<input type="text" name="inpublisher" value="<?php echo $str3; ?>">
+<br>
 <input type="submit" value="検索">
 <br>
 <?php if($get_count > 0): ?>

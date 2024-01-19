@@ -2,7 +2,7 @@
 
 // 検索条件を配列にする
 $params = array();
-$str1=$str2='';
+$str1=$str2=$str3='';
 //書籍タイトル
 if(isset($_POST['intitle'])){
     if($_POST['intitle']!=''){
@@ -19,6 +19,15 @@ if(isset($_POST['inauthor'])){
         $params = array_merge($params,array('inauthor'=>$str2));
     }else{
         unset($params['inauthor']);
+    }
+}
+//出版社
+if(isset($_POST['inpublisher'])){
+    if($_POST['inpublisher']!=''){
+        $str3=$_POST['inpublisher'];
+        $params = array_merge($params,array('inpublisher'=>$str3));
+    }else{
+        unset($params['inpublisher']);
     }
 }
 
