@@ -37,16 +37,23 @@ if(isset($_POST['p+'])){
 // APIの基本になるURL
 $base_url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
-// 配列で設定した検索条件をURLに追加
-foreach ($params as $key => $value) {
-  $base_url .= $key.':'.$value.'+';
+$count = count($params);
+
+if($cout!=0){
+    // 配列で設定した検索条件をURLに追加
+    foreach ($params as $key => $value) {
+        $base_url .= $key.':'.$value.'+';
+    }
+
+    // 末尾につく「+」をいったん削除
+    $params_url = substr($base_url, 0, -1);
+
+    // 件数情報を設定
+    $url = $params_url.'&maxResults='.$maxResults.'&startIndex='.$startIndex;
+}else{
+    // 件数情報を設定
+    $url = $params_url.'maxResults='.$maxResults.'&startIndex='.$startIndex;
 }
-
-// 末尾につく「+」をいったん削除
-$params_url = substr($base_url, 0, -1);
-
-// 件数情報を設定
-$url = $params_url.'&maxResults='.$maxResults.'&startIndex='.$startIndex;
 
 // 書籍情報を取得
 $json = file_get_contents($url);
