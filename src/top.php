@@ -23,7 +23,7 @@
           if(isset($book->volumeInfo->authors)){
             $authors = implode(',', $book->volumeInfo->authors);
           }else{
-            $a=['nul'];
+            $a=['null'];
             $authors = implode(',', $a); 
           }
           //出版社
@@ -32,10 +32,14 @@
           if(isset($book->volumeInfo->publishDate)){
             $publishDate = $book->volumeInfo->publishDate;
           }else{
-            $publishDate = '';
+            $publishDate = 'null';
           }
           //書籍内容の説明
-          $description = $book->volumeInfo->description;
+          if(isset($book->volumeInfo->description)){
+            $description = $book->volumeInfo->description;
+          }else{
+            $description = 'null';
+          }
           //ページ数
           $pageCount = $book->volumeInfo->pageCount;
       ?>
