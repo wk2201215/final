@@ -55,7 +55,7 @@ if(isset($data->items)){
    $get_count = count($books);
 }else{
     // 書籍情報を取得
-    $books = [];
+    // $books = [];
 
    // 実際に取得した件数
    $get_count = 0;

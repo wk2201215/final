@@ -2,7 +2,7 @@
 <?php require 'default/api.php'; ?>
 <?php require 'default/header.php'; ?>
 <?php require 'search.php'; ?>
-<p>全<?php echo $total_count; ?>件中、<?php echo $get_count; ?>件を表示中</p>
+<p>全<?php echo $total_count; ?>件中、<?php echo $get_count; ?>件を表示中（<?php $startIndex+1; ?>ページ目）</p>
 
   <!-- 1件以上取得した書籍情報がある場合 -->
   <?php if($get_count > 0): ?>
@@ -35,6 +35,15 @@
           </p>
         </div>
       <?php endforeach; ?>
+        <div id="app">
+          <button
+          @click="pura"
+          ><</button>
+          {{p}}ページ目
+          <button
+          @click="mai"
+          >></button>
+        </div>
 
     </div><!-- ./loop_books -->
 
@@ -43,4 +52,6 @@
     <p>情報が有りません</p>
 
   <?php endif; ?>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./script/top.js"></script>
 <?php require 'default/footer.php'; ?>
