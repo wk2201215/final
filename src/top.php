@@ -2,6 +2,7 @@
 <?php require 'default/api.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <?php require 'search.php'; ?>
+<?php require 'ba-ga-.php'; ?>
 <p>全<?php echo $total_count; ?>ページ、<?php echo $get_count; ?>件を表示中（<?php echo $startIndex+1; ?>ページ目）</p>
 
   <!-- 1件以上取得した書籍情報がある場合 -->
