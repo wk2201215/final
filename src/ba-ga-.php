@@ -21,7 +21,6 @@
 
 
 <div class="container">
-  Check out my new pens
   <br>
   <br>
 </div>
