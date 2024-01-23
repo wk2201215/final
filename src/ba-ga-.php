@@ -3,16 +3,16 @@
   <span>
     <ul class="sub-menu ">
       <li>
-        <a href="#about" title="about">Sobre / About</a>
+        <a href="top.php" title="home">home</a>
       </li>
       <li>
-        <a href="#skills" title="skills">Habilidades / Skills</a>
+        <a href="registered-books.php" title="Registered books">Registered books</a>
       </li>
       <li>
-        <a href="#jobs" title="jobs">Trabalhos / Jobs</a>
+        <a href="" title="">??????</a>
       </li>
       <li>
-        <a href="#contact" title="contact">Contato / Contact</a>
+        <a href="logout.php" title="Logout">Logout</a>
       </li>
     </ul>
   </span>
