@@ -65,7 +65,4 @@ $(document).ready(function() {
       onButton.innerHTML = 'ON';
     }
   }
-  btn.addEventListener('click', () => {
-      btn.textContent = '押されました';
- })
 }
