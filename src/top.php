@@ -79,7 +79,7 @@
                     </div>
                   </div>
                 </div>
-                <button id="btn">変化</button>
+                <button id="btn">ON</button>
             </li>
           </ul>
         </div>

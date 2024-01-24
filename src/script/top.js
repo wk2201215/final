@@ -57,6 +57,14 @@ $(document).ready(function() {
 'use strict'
  {
   const btn = document.getElementById('btn');
+  btn.addEventListener('click', toggleBtn);
+  function toggleBtn(){
+    if (onButton.innerHTML === 'ON') {
+      onButton.innerHTML = 'OFF';
+    }else{
+      onButton.innerHTML = 'ON';
+    }
+  }
   btn.addEventListener('click', () => {
       btn.textContent = '押されました';
  })
