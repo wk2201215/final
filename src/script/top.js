@@ -57,12 +57,11 @@ $(document).ready(function() {
 'use strict'
  {
   const btn = document.getElementById('btn');
-  btn.addEventListener('click', toggleBtn);
-  function toggleBtn(){
-    if (onButton.innerHTML === 'ON') {
-      onButton.innerHTML = 'OFF';
+  btn.addEventListener('click', () => {
+    if(btn.textContent=='登録'){
+        btn.textContent = '登録済み';
     }else{
-      onButton.innerHTML = 'ON';
+        btn.textContent = '登録';
     }
-  }
+  })
 }

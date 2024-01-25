@@ -79,7 +79,7 @@
                     </div>
                   </div>
                 </div>
-                <button id="btn">ON</button>
+                <button id="btn">登録</button>
             </li>
           </ul>
         </div>
