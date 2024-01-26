@@ -54,10 +54,10 @@ $(document).ready(function() {
   });
 
 //登録ボタン
-var button = document.getElementsByClassName('button');
+var buttonT = document.getElementsByClassName('button');
 
-for (i = 0; i < button.length; i++) {
-  button[i].addEventListener("click", function() {
+for (i = 0; i < buttonT.length; i++) {
+  buttonT[i].addEventListener("click", function() {
     this.classList.toggle('active');
     if(this.textContent=='登録'){
         this.textContent = '登録済み';
