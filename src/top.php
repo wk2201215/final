@@ -10,7 +10,9 @@
     <div class="loop_books">
 
       <!-- 取得した書籍情報を順に表示 -->
-      <?php foreach($books as $book):
+      <?php $count = 0;
+          foreach($books as $book):
+          
           // タイトル
           $title = $book->volumeInfo->title;
           // サムネ画像
@@ -79,11 +81,11 @@
                     </div>
                   </div>
                 </div>
-                <button id="btn">登録</button>
+                <button class="button" id="btn">登録</button>
             </li>
           </ul>
         </div>
-      <?php endforeach; ?>
+      <?php $count++;endforeach; ?>
 
     </div><!-- ./loop_books -->
 

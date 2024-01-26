@@ -54,14 +54,15 @@ $(document).ready(function() {
   });
 
 //登録ボタン
-'use strict'
- {
-  const btn = document.getElementById('btn');
-  btn.addEventListener('click', () => {
-    if(btn.textContent=='登録'){
-        btn.textContent = '登録済み';
-    }else{
-        btn.textContent = '登録';
-    }
-  })
+var button = document.getElementsByClassName('button');
+
+for (i = 0; i < button.length; i++) {
+  button[i].addEventListener("click", function() {
+    this.classList.toggle('active');
+    if(this.textContent=='登録'){
+        this.textContent = '登録済み';
+      }else{
+        this.textContent = '登録';
+      }
+  });
 }
