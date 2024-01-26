@@ -54,7 +54,7 @@ $(document).ready(function() {
   });
 
 //登録ボタン
-var buttonT = document.getElementsByClassName('button');
+var buttonT = document.getElementsByClassName('buttonT');
 
 for (i = 0; i < buttonT.length; i++) {
   buttonT[i].addEventListener("click", function() {

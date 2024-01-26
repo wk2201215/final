@@ -81,7 +81,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="buttonT" id="btn">登録</button>
+                <button class="buttonT">登録</button>
             </li>
           </ul>
         </div>
