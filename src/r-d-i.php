@@ -3,7 +3,6 @@
 <?php require 'default/api2.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <form action="registered-books.php" method="post">
-<?php if($get_count > 0): ?>
     <div class="loop_books">
 
       <!-- 取得した書籍情報を順に表示 -->
@@ -86,10 +85,6 @@
     </div><!-- ./loop_books -->
 
   <!-- 書籍情報が取得されていない場合 -->
-  <?php else: ?>
-    <p>情報が有りません</p>
-
-  <?php endif; ?>
 カテゴリ:
 <select name="c[]" required>
       <?php
