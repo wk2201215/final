@@ -4,7 +4,6 @@
 <?php require 'ba-ga-.php'; ?>
 <?php
 $pdo=new PDO($connect,USER,PASS);
-$pass=password_hash($_POST['pas2'], PASSWORD_DEFAULT);
 $sql=$pdo->prepare('select * from RegisteredBooks where user_id=?');
 $sql->execute([$_SESSION['user']['id']]);
 $c=$sql->rowCount();
