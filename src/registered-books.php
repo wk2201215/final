@@ -15,7 +15,7 @@ $c=$sql->rowCount();
       <!-- 取得した書籍情報を順に表示 -->
       <?php $count = 0;
           foreach($sql as $book):
-          require 'api3.php';
+          require 'default/api3.php';
           //書籍ID
           $id = $data->id;
           // タイトル
