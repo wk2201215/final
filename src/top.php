@@ -85,7 +85,7 @@
                 </div>
                 <?php
                 $pdo=new PDO($connect, USER, PASS);
-                $sql=$pdo->prepare('select count(*) from RegisteredBooks where user_id=? and book_id=?');
+                $sql=$pdo->prepare('select * from RegisteredBooks where user_id=? and book_id=?');
                 $sql->execute([$_SESSION['user']['id'],$id]);
                 $c=$sql->rowCount();
                 echo $c;
