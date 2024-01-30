@@ -112,7 +112,7 @@
 <input type="radio" name="o" value="1" required>している
 <input type="radio" name="o" value="0" required>していない
 <br>
-<input type="hidden" name="b-id" value="">
+<input type="hidden" name="b-id" value="<?php echo $id; ?>">
 <input type="submit" value="登録">
 </form>
 <?php require 'default/footer-top.php'; ?>
