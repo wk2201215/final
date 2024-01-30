@@ -11,7 +11,7 @@ CREATE TABLE Administrators(
 
 CREATE TABLE Users(
     user_id  VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(500) NOT NULL,
     user_name  VARCHAR(50) NOT NULL,
     gender INT NOT NULL,
     birth DATE NOT NULL,
