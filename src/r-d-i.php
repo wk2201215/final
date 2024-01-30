@@ -86,15 +86,16 @@
 
   <!-- 書籍情報が取得されていない場合 -->
 カテゴリ:
-<select name="c[]" required>
-      <?php
-      $pdo=new PDO($connect, USER, PASS);
-      $sql=$pdo->prepare('select * from Category where user_id=?');
-      $sql->execute([$_SESSION['user']['id']]);
-      foreach($sql as $row){
-            echo '<option value="',$row['category_id'],'" selected>',$row['category_name'],'</option>';
-      }
-      ?>
+<?php
+  $pdo=new PDO($connect, USER, PASS);
+  $sql=$pdo->prepare('select * from Category where user_id=?');
+  $sql->execute([$_SESSION['user']['id']]);
+  foreach($sql as $row){
+        echo '<option value="',$row['category_id'],'" selected>',$row['category_name'],'</option>';
+  }
+?>
+<select name="c" required>
+      
 </select>
 <br>
 購入日:
