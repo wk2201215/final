@@ -2,7 +2,11 @@
 <?php require 'default/db-connect.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <?php require 'ba-ga-.php'; ?>
-<!-- <form action="registered-books.php" method="post"> -->
+<form action="category-insert.php" method="post">
+    カテゴリ名
+    <input type="text" name="id">
+    <input type="submit">
+</form>
 <?php
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from Category where user_id=?');
@@ -26,5 +30,4 @@ if(!empty($sql)){
     echo 'カテゴリがありません。';
 }
 ?>
-<!-- </form> -->
 <?php require 'default/footer-top.php'; ?>
