@@ -90,7 +90,7 @@
                 $c=$sql->rowCount();
                 // echo $c;
                 if($c==0):?>
-                    <button type="submit" name="t-b-id" value="<?php echo $id; ?>" onclick="location.href='r-d-i.php'">登録</button>
+                    <button onclick="location.href='r-d-i.php?t-d-id=<?php echo $id; ?>'">登録</button>
                 <?php else:?>
                     登録済み
                 <?php endif;?>
