@@ -114,4 +114,4 @@
 <input type="hidden" name="b-id" value="">
 <input type="submit" value="登録">
 </form>
-<?php require 'default/footer.php'; ?>
+<?php require 'default/footer-top.php'; ?>
