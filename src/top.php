@@ -91,7 +91,7 @@
                     <button name="t-b-id" value="<?php echo $id; ?>" onclick="location.href='r-d-i.php'">登録</button>
                 <?php else:?>
                     登録済み
-                <?php endif:?>
+                <?php endif;?>
             </li>
           </ul>
         </div>
