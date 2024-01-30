@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require 'default/db-connect.php'; ?>
-<?php require 'default/api2.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <?php require 'ba-ga-.php'; ?>
 <!-- <form action="registered-books.php" method="post"> -->
