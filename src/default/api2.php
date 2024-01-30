@@ -10,8 +10,8 @@ $startIndex = 0;  //欲しいページ番号-1 で設定
 // APIの基本になるURL
 $base_url = 'https://www.googleapis.com/books/v1/volumes/';
 
-var_dump($_POST);
-$base_url .= $_POST['t-d-id'];
+var_dump($_GET);
+$base_url .= $_GET['t-d-id'];
 
 // 書籍情報を取得
 $json = file_get_contents($base_url);
