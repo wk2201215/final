@@ -90,13 +90,12 @@
   $pdo=new PDO($connect, USER, PASS);
   $sql=$pdo->prepare('select * from Category where user_id=?');
   $sql->execute([$_SESSION['user']['id']]);
+  echo '<select name="c" required>';
   foreach($sql as $row){
         echo '<option value="',$row['category_id'],'" selected>',$row['category_name'],'</option>';
   }
+  echo'</select>';
 ?>
-<select name="c" required>
-      
-</select>
 <br>
 購入日:
 <input type="data" name="d">
