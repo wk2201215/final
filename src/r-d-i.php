@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'default/api.php'; ?>
+<?php require 'default/api2.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <form action="registered-books.php" method="post">
 <?php if($get_count > 0): ?>
@@ -97,7 +97,7 @@
       $pdo=new PDO($connect, USER, PASS);
       $sql=$pdo->prepare('select * from Category where user_id=?');
       $sql->execute([$_SESSION['user']['id']]);
-      for($sql as $row){
+      foreach($sql as $row){
             echo '<option value="',$row['category_id'],'" selected>',$row['category_name'],'</option>';
       }
       ?>
