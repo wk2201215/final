@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require 'db-connect.php'; ?>
+<?php require 'default/db-connect.php'; ?>
 <?php require 'default/api.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <?php require 'search.php'; ?>
