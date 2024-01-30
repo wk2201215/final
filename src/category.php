@@ -5,8 +5,9 @@
 <form action="category-insert.php" method="post">
     カテゴリ名
     <input type="text" name="id">
-    <input type="submit">
+    <input type="submit" value="登録">
 </form>
+<hr>
 <?php
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from Category where user_id=?');
