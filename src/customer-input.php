@@ -2,7 +2,7 @@
 <?php require 'default/db-connect.php'; ?>
 <?php require 'default/header.php'; ?>
 <?php
-    $id=$password=$name=$email=$postcode=$address=$tel=$email2=$birth='';
+    $id=$password=$name=$mail=$postcode=$address=$tel=$email2=$birth='';
     $b='登録';
     //登録か変更の確認
     if(isset($_GET['hogeA'])){
