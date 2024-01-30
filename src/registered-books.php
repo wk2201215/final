@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require 'default/db-connect.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <?php require 'ba-ga-.php'; ?>
 <?php
