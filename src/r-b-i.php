@@ -3,7 +3,7 @@
 <?php require 'default/api2.php'; ?>
 <?php require 'default/header-top.php'; ?>
 <?php require 'ba-ga-.php'; ?>
-<form action="registered-books.php" method="post">
+<form action="r-b-i-output.php" method="post">
     <div class="loop_books">
 
       <!-- 取得した書籍情報を順に表示 -->
