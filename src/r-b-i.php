@@ -99,7 +99,7 @@
 ?>
 <br>
 購入日:
-<input type="data" name="d">
+<input type="date" name="d">
 <br>
 所持:
 <input type="radio" name="s" value="1" required>している
