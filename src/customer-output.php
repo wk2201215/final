@@ -42,8 +42,6 @@ if($ab==1){
         'gender'=>$_POST['gender'],
         'birth'=>$_POST['birth'],
         'mail'=>$_POST['mail'],
-        'tel'=>$row['telephone'],
-        'mail'=>$row['mail'],
         'tel'=>$_POST['tel']
     ];
     header('Location:customer-z.php?hogeA='.$str);
