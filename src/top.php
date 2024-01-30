@@ -87,6 +87,7 @@
                 $pdo=new PDO($connect, USER, PASS);
                 $sql=$pdo->prepare('select count(*) from RegisteredBooks where user_id=? and book_id=?');
                 $sql->execute([$_SESSION['user']['id'],$id]);
+                echo $sql;
                 if($sql==0):?>
                     <button name="t-b-id" value="<?php echo $id; ?>" onclick="location.href='r-d-i.php'">登録</button>
                 <?php else:?>
