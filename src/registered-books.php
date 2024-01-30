@@ -4,6 +4,8 @@
 <?php require 'ba-ga-.php'; ?>
 <?php
 $pdo=new PDO($connect,USER,PASS);
+$sql2=$pdo->prepare('select * from Category where user_id=?');
+$sql2->execute([$_SESSION['user']['id']]);
 $sql=$pdo->prepare('select * from RegisteredBooks where user_id=?');
 $sql->execute([$_SESSION['user']['id']]);
 $c=$sql->rowCount();
@@ -14,7 +16,11 @@ $c=$sql->rowCount();
 
       <!-- 取得した書籍情報を順に表示 -->
       <?php $count = 0;
-          foreach($sql as $book):
+      foreach($sql2 as $catego):
+        $sql3=$pdo->prepare('select * from RegisteredBooks where user_id=? and category_id=?');
+        $sql3->execute([$_SESSION['user']['id'],$catego['category_id']]);
+        echo $catego['category_name'];
+          foreach($sql3 as $book):
           require 'default/api3.php';
           //書籍ID
           $id = $data->id;
@@ -91,6 +97,7 @@ $c=$sql->rowCount();
           </ul>
         </div>
       <?php $count++;endforeach; ?>
+      <?php endforeach; ?>
 
     </div><!-- ./loop_books -->
 
