@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'default/db-connect.php'; ?>
 <?php
-unset($_SESSION['customer']);
+unset($_SESSION['user']);
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from Users where user_id=?');
 $sql->execute([$_POST['id']]);
