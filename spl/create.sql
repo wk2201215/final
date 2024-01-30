@@ -1,9 +1,3 @@
-CREATE TABLE Category(
-    category_id INT auto_increment NOT NULL,
-    category_name VARCHAR(50) NOT NULL,
-    PRIMARY KEY(category_id)
-);
-
 CREATE TABLE Administrators(
     administrators_id  INT auto_increment NOT NULL,
     password VARCHAR(50) NOT NULL,
@@ -27,6 +21,14 @@ CREATE TABLE Users(
     update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     last_access_date  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(user_id)
+);
+
+CREATE TABLE Category(
+    category_id INT auto_increment NOT NULL,
+    user_id  VARCHAR(50) NOT NULL,
+    category_name VARCHAR(50) NOT NULL,
+    PRIMARY KEY(category_id, user_id),
+    FOREIGN KEY(user_id) REFERENCES Users(user_id)
 );
 
 CREATE TABLE RegisteredBooks(

@@ -13,7 +13,7 @@
         // $password=$_SESSION['user']['password'];
         $name=$_SESSION['user']['name'];
         $tel=$_SESSION['user']['tel'];
-        $email=$_SESSION['user']['mail'];
+        $mail=$_SESSION['user']['mail'];
         $birth=$_SESSION['user']['birth'];
         $gender=$_SESSION['user']['gender'];
         $b='更新';
@@ -70,18 +70,6 @@
     
     echo '<input class="button is-primary is-medium mt-4" type="submit" value="',$b,'" style="width:100%;">';
     echo '</form>';
-?>
-
-<?php 
-    if(isset($_SESSION['customer'])){
-        echo '</div>';
-        require 'footer-menu.php';
-    }else{
-        echo '</div>';
-        echo '</div>';
-        echo '</section>';
-        echo '</div>';
-    }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-password-strength-meter@1.4.2/dist/vue-password-strength-meter.min.js"></script>

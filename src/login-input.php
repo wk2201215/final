@@ -2,7 +2,7 @@
 <?php require 'default/header.php'; ?>
 <form action="login-output.php" method="post">
 <?php
-    unset($_SESSION['customer']);
+    unset($_SESSION['user']);
     if(isset($_GET['hogeA'])){
         echo '<p>',$_GET['hogeA'],'</p>';
     }

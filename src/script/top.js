@@ -53,16 +53,80 @@ $(document).ready(function() {
     });
   });
 
-//登録ボタン
-var buttonT = document.getElementsByClassName('buttonT');
 
-for (i = 0; i < buttonT.length; i++) {
-  buttonT[i].addEventListener("click", function() {
-    this.classList.toggle('active');
-    if(this.textContent=='登録'){
-        this.textContent = '登録済み';
-      }else{
-        this.textContent = '登録';
-      }
-  });
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//登録ボタン
+// var buttonT = document.getElementsByClassName('buttonT');
+
+// for (i = 0; i < buttonT.length; i++) {
+
+//     $.ajax({
+//         type: 'GET', // HTTPリクエストメソッドの指定
+//         url: 'top-db.php', // 送信先URLの指定
+//         async: true, // 非同期通信フラグの指定
+//         dataType: 'json', // 受信するデータタイプの指定
+//         timeout: 10000, // タイムアウト時間の指定
+//         data: {
+//           id: this.value,
+//           change: 'delete' // クエリパラメータの指定。サーバーに送信したいデータを指定
+//         }
+//     })
+//     .done(function(data) {
+//       // 通信が成功したときの処理
+//     })
+//     .fail(function() {
+//       // 通信が失敗したときの処理
+//     });
+//     // .always(function() {
+//     //   // 通信が完了したときの処理
+//     // });
+
+//   buttonT[i].addEventListener("click", function() {
+//     this.classList.toggle('active');
+//     if(this.textContent=='登録'){
+//         this.textContent = '登録済み';
+//       }else{
+//         this.textContent = '登録';
+//       }
+//   });
+// }
+

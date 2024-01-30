@@ -2,12 +2,8 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'default/api.php'; ?>
 <?php require 'default/header-top.php'; ?>
-<?php require 'search.php'; ?>
-<?php require 'ba-ga-.php'; ?>
-<p>全<?php echo $total_count; ?>ページ、<?php echo $get_count; ?>件を表示中（<?php echo $startIndex+1; ?>ページ目）</p>
-
-  <!-- 1件以上取得した書籍情報がある場合 -->
-  <?php if($get_count > 0): ?>
+<form action="registered-books.php" method="post">
+<?php if($get_count > 0): ?>
     <div class="loop_books">
 
       <!-- 取得した書籍情報を順に表示 -->
@@ -83,15 +79,6 @@
                     </div>
                   </div>
                 </div>
-                <?php
-                $pdo=new PDO($connect, USER, PASS);
-                $sql=$pdo->prepare('select count(*) from RegisteredBooks where user_id=? and book_id=?');
-                $sql->execute([$_SESSION['user']['id'],$id]);
-                if($sql==0):?>
-                    <button name="t-b-id" value="<?php echo $id; ?>" onclick="location.href='r-d-i.php'">登録</button>
-                <?php else:?>
-                    登録済み
-                <?php endif:?>
             </li>
           </ul>
         </div>
@@ -104,4 +91,33 @@
     <p>情報が有りません</p>
 
   <?php endif; ?>
-<?php require 'default/footer-top.php'; ?>
+カテゴリ:
+<select name="c[]" required>
+      <?php
+      $pdo=new PDO($connect, USER, PASS);
+      $sql=$pdo->prepare('select * from Category where user_id=?');
+      $sql->execute([$_SESSION['user']['id']]);
+      for($sql as $row){
+            echo '<option value="',$row['category_id'],'" selected>',$row['category_name'],'</option>';
+      }
+      ?>
+</select>
+<br>
+購入日:
+<input type="data" name="d">
+<br>
+所持:
+<input type="radio" name="s" value="1" required>している
+<input type="radio" name="s" value="0" required>していない
+<br>
+購入金額:
+<input type="number" name="p" value="0">円
+<br>
+お気に入り:
+<input type="radio" name="o" value="1" required>している
+<input type="radio" name="o" value="0" required>していない
+<br>
+<input type="hidden" name="b-id" value="">
+<input type="submit" value="登録">
+</form>
+<?php require 'default/footer.php'; ?>
