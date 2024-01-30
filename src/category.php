@@ -17,14 +17,10 @@ if(!empty($sql)){
     foreach($sql as $row){
         echo '<tr>';
         echo '<td>',$no,'</td>';
-        echo '<td><a href="detail.php?id=',$id,'">',$product['name'],'</a></td>';
-        echo '<td>',$product['price'],'</td>';
-        echo '<td>',$product['count'],'</td>';
-        $subtotal=$product['price']*$product['count'];
-        $total+=$subtotal;
-        echo '<td>',$subtotal,'</td>';
-        echo '<td><a href="cart-delete.php?id=',$id,'">削除</a></td>';
+        echo '<td>',$row['category_name'],'</td>';
+        echo '<td><a href="category-delete.php?id=',$row['category_id'],'">削除</a></td>';
         echo '</tr>';
+        $no++;
     }
     echo '</table>';
 }else{
