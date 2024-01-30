@@ -9,7 +9,7 @@
         <a href="registered-books.php" title="Registered books">Registered books</a>
       </li>
       <li>
-        <a href="" title="">??????</a>
+        <a href="category.php" title="Category">Category</a>
       </li>
       <li>
         <a href="logout.php" title="Logout">Logout</a>

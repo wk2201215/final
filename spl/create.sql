@@ -34,7 +34,7 @@ CREATE TABLE Category(
 CREATE TABLE RegisteredBooks(
     user_id VARCHAR(50) NOT NULL,
     book_id VARCHAR(50) NOT NULL,
-    category_id INT NOT NULL,
+    category_id INT,
     favorite INT DEFAULT 0 NOT NULL,
     Possession INT DEFAULT 0 NOT NULL,
     purchase_date DATETIME,
