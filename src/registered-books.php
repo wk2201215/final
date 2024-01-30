@@ -97,6 +97,7 @@ $c=$sql->rowCount();
           </ul>
         </div>
       <?php $count++;endforeach; ?>
+      <hr>
       <?php endforeach; ?>
 
     </div><!-- ./loop_books -->
