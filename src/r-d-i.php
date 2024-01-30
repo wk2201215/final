@@ -7,53 +7,52 @@
     <div class="loop_books">
 
       <!-- 取得した書籍情報を順に表示 -->
-      <?php $count = 0;
-          foreach($books as $book):
+      <?php
           //書籍ID
-          $id = $book->id;
+          $id = $data->id;
           // タイトル
-          $title = $book->volumeInfo->title;
+          $title = $data->volumeInfo->title;
           // サムネ画像
-          $img = $book->volumeInfo->readingModes->image;
+          $img = $data->volumeInfo->readingModes->image;
           if($img){
-            $thumbnail = $book->volumeInfo->imageLinks->thumbnail;
+            $thumbnail = $data->volumeInfo->imageLinks->thumbnail;
           }else{
             $thumbnail = './img/null.jpg';
           }
           // 著者（配列なのでカンマ区切りに変更）
-          if(isset($book->volumeInfo->authors)){
-            $authors = implode(',', $book->volumeInfo->authors);
+          if(isset($data->volumeInfo->authors)){
+            $authors = implode(',', $data->volumeInfo->authors);
           }else{
             $a=['null'];
             $authors = implode(',', $a); 
           }
           //出版社
-          if(isset($book->volumeInfo->publisher)){
-            $publisher = $book->volumeInfo->publisher;
+          if(isset($data->volumeInfo->publisher)){
+            $publisher = $data->volumeInfo->publisher;
           }else{
             $publisher = 'null';
           }
           //発行年月日
-          if(isset($book->volumeInfo->publishDate)){
-            $publishDate = $book->volumeInfo->publishDate;
+          if(isset($data->volumeInfo->publishDate)){
+            $publishDate = $data->volumeInfo->publishDate;
           }else{
             $publishDate = 'null';
           }
           //書籍内容の説明
-          if(isset($book->volumeInfo->description)){
-            $description = $book->volumeInfo->description;
+          if(isset($data->volumeInfo->description)){
+            $description = $data->volumeInfo->description;
           }else{
             $description = 'null';
           }
           //ページ数
-          if(isset($book->volumeInfo->pageCount)){
-            $pageCount = $book->volumeInfo->pageCount;
+          if(isset($data->volumeInfo->pageCount)){
+            $pageCount = $data->volumeInfo->pageCount;
           }else{
             $pageCount = 'null';
           }
           //リンクGoogle Booksの書籍ページ
-          if(isset($book->volumeInfo->infoLink)){
-            $infoLink = $book->volumeInfo->infoLink;
+          if(isset($data->volumeInfo->infoLink)){
+            $infoLink = $data->volumeInfo->infoLink;
           }else{
             $infoLink = '';
           }
@@ -82,7 +81,7 @@
             </li>
           </ul>
         </div>
-      <?php $count++;endforeach; ?>
+      <?php ?>
 
     </div><!-- ./loop_books -->
 

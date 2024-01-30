@@ -19,22 +19,5 @@ $json = file_get_contents($base_url);
 // デコード（objectに変換）
 $data = json_decode($json);
 
-// 全体の件数を取得
-$total_count = $data->totalItems;
-
-if(isset($data->items)){
-    // 書籍情報を取得
-    $books = $data->items;
-
-   // 実際に取得した件数
-   $get_count = count($books);
-}else{
-    // 書籍情報を取得
-    $books = [];
-
-   // 実際に取得した件数
-   $get_count = 0;
-}
-
 
 ?>
