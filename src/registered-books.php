@@ -4,7 +4,7 @@
 <?php require 'ba-ga-.php'; ?>
 <?php
 $pdo=new PDO($connect,USER,PASS);
-$sql2=$pdo->prepare('select * from Category where user_id=?');
+$sql2=$pdo->prepare('select * from Category where user_id=? or category_id=1');
 $sql2->execute([$_SESSION['user']['id']]);
 $sql=$pdo->prepare('select * from RegisteredBooks where user_id=?');
 $sql->execute([$_SESSION['user']['id']]);
